@@ -1,5 +1,6 @@
 # Kesimpulan video
-<img width="600" alt="image" align="left" src="https://github.com/user-attachments/assets/4b23c344-90a8-4276-8b9e-277f47f1f761" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/4b23c344-90a8-4276-8b9e-277f47f1f761" />
+
 ### The FASTEST introduction to Reinforcement Learning on the internet
 **Apa itu Reinforcement Learning (RL)?**
 RL adalah bidang machine learning yang mengajarkan komputer/robot untuk melakukan tugas melalui trial and error, mirip cara manusia belajar - menggunakan reward positif dan negatif untuk memperkuat perilaku yang diinginkan.
