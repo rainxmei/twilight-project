@@ -35,5 +35,7 @@ Reinforcement Learning adalah teknologi penting untuk membawa AI ke dunia fisik,
 # Rangkuman PDF
 <img height="400" alt="image" src="https://github.com/user-attachments/assets/0a6caa80-b131-4dab-9842-5434b24ddba3" />
 
+### Introduction to Humanoid Robotics
+
 
 
