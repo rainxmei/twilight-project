@@ -32,3 +32,8 @@ RL adalah bidang machine learning yang mengajarkan komputer/robot untuk melakuka
 ### Kesimpulan
 Reinforcement Learning adalah teknologi penting untuk membawa AI ke dunia fisik, tetapi masih memerlukan pengembangan signifikan dalam efisiensi, keandalan, dan pemahaman lingkungan sebelum robot bisa melakukan tugas sehari-hari seperti mengikat tali sepatu atau melipat baju.
 
+# Rankuman PDF
+![Introduction to Humanoid Robotics ( PDFDrive )-1_page-0001](https://github.com/user-attachments/assets/0a6caa80-b131-4dab-9842-5434b24ddba3)
+
+
+
