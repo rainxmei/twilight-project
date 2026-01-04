@@ -6,8 +6,8 @@
 RL adalah bidang machine learning yang mengajarkan komputer/robot untuk melakukan tugas melalui trial and error, mirip cara manusia belajar - menggunakan reward positif dan negatif untuk memperkuat perilaku yang diinginkan.
 
 **Konsep Dasar: Markov Decision Process (MDP)**
-- Agent: Yang bisa Anda kontrol langsung (otak, pemain, mobil)
-- Environment: Yang tidak bisa Anda kontrol langsung (anggota tubuh, jalan, peta)
+- Agent: Yang bisa di kontrol langsung (otak, pemain, mobil)
+- Environment: Yang tidak bisa di kontrol langsung (anggota tubuh, jalan, peta)
 - State: Informasi dari environment (posisi, kecepatan, visual)
 - Action: Pengaruh agent ke environment (gerakan, keputusan)
 - Reward: Sinyal numerik apakah action baik/buruk
