@@ -37,5 +37,17 @@ Reinforcement Learning adalah teknologi penting untuk membawa AI ke dunia fisik,
 
 ### Introduction to Humanoid Robotics
 
+## Chapter 1 -Introduction
+Bab ini memperkenalkan konsep robot humanoid, yaitu robot yang memiliki bentuk dan struktur menyerupai manusia. Penulis menekankan bahwa meskipun tidak semua robot harus berbentuk humanoid, bentuk manusia menjadi penting karena lingkungan, alat, dan sistem sosial manusia memang dirancang untuk tubuh manusia.
+
+**Tiga keunggulan utama robot humanoid adalah**
+- Dapat bekerja di lingkungan manusia tanpa modifikasi, seperti berjalan di tangga atau koridor.
+- Dapat menggunakan alat-alat manusia secara langsung, misalnya obeng, kursi, dan kendaraan.
+- Lebih mudah diterima secara sosial, karena bentuk manusia memudahkan interaksi dan personifikasi.
+
+Bab ini juga mengulas sejarah perkembangan robot humanoid, dimulai dari WABOT-1 dan WABOT-2 dari Universitas Waseda, hingga terobosan besar Honda dengan robot P2 dan ASIMO yang menunjukkan kemampuan berjalan dua kaki secara stabil. Keberhasilan ini didukung oleh kemajuan desain mekanik, aktuator, sensor, dan sistem kontrol.
+
+visi masa depan robot humanoid adalah sebagai platform integrasi teknologi robotika untuk aplikasi industri, lingkungan berbahaya, hiburan, hingga layanan manusia, sekaligus menegaskan bahwa pengembangan robot humanoid masih merupakan perjalanan jangka panjang.
+
 
 
