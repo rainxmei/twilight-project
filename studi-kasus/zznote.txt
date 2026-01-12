@@ -1,0 +1,5 @@
+yang sudah diselesaikan 
+
+1. leap
+2. reverse-string
+3. 
