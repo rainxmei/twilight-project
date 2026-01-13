@@ -6,6 +6,7 @@ using namespace std;
 namespace rain_drops {
     
     string raindrop_sounds(int number) {
+        
         string sounds;
         if (number % 3 == 0) {
             sounds += "Pling";

@@ -4,4 +4,5 @@ yang sudah diselesaikan
 2. reverse-string
 3. space-age
 4. triangle
-5. 
+5. grains
+6. raindrops
