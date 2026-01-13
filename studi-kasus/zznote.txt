@@ -3,4 +3,5 @@ yang sudah diselesaikan
 1. leap
 2. reverse-string
 3. space-age
-4. 
+4. triangle
+5. 
