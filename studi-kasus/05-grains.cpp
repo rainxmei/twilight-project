@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// link soal
+// https://exercism.org/tracks/cpp/exercises/grains
 namespace grains {
 
     uint64_t grains_in_square(int n) {
