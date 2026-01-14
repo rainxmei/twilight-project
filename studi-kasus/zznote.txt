@@ -6,3 +6,5 @@ yang sudah diselesaikan
 4. triangle
 5. grains
 6. raindrops
+7. pangram
+8. 
