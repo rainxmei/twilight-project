@@ -13,10 +13,10 @@ namespace pangram {
                     found = true;
                     break;
                 }
-
+            }
+            
             if (!found) {
                 return false;
-            }
             }
         }
         return true;
