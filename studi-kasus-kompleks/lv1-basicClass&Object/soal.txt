@@ -1,0 +1,36 @@
+#Studi Kasus
+Bikin class Character untuk game.
+
+#Spesifikasi Class
+Class Character punya:
+Attribute (private)
+- name        : string
+- level       : int
+- hp          : int
+- strength    : int
+- agility     : int
+- intelligence: int
+
+##Behavior / Method (public)
+1. Constructor
+menerima name
+default:
+level = 1
+hp = 100
+strength = 10
+agility = 10
+intelligence = 10
+
+2. void showStatus()
+menampilkan semua atribut
+
+3. void levelUp()
+level +1
+hp +20
+strength +5
+agility +5
+intelligence +5
+
+4. void takeDamage(int damage)
+hp berkurang
+hp tidak boleh < 0
