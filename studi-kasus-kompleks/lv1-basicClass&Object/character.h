@@ -7,16 +7,17 @@
 using namespace std;
 
 class Character{
-    public:
+    private:
         string name;
         int level;
         int hp;
         int strength;
         int agility;
-        int intellegent;
+        int intelligence;
 
+    public:
         // constructor
-        Character(string name);
+        Character(const string& name);
 
         // methods
         void showStatus();
