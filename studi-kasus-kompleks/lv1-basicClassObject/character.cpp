@@ -40,5 +40,5 @@ void Character::takeDamage(int damage){
         hp = 0;
     }
 
-    cout << this->name << " takes " << damage << " damage!" << endl;
+    cout << name << " takes " << damage << " damage!" << endl;
 }
