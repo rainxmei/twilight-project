@@ -60,4 +60,5 @@ void Character::heal(int heal){
     cout << name << " heals " << heal << " HP!" << endl;
     cout << "Current HP: " << hp << " / " << maxHp << endl;
     cout << "\n";
+    cout << "tes";
 }
