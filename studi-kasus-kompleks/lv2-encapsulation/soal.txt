@@ -1,0 +1,7 @@
+# Studi Kasus
+Bikin class Character untuk game.
+
+# memperbarui yang sebelumnya dengan menambahkan 
+- encapsulasi terjaga
+- urutan logika 
+- tidak ada state ilegal (HP negatif /> maxHP )
