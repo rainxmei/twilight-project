@@ -1,7 +1,8 @@
 # Studi Kasus
 Bikin class Character untuk game.
 
-# memperbarui yang sebelumnya dengan menambahkan 
-- encapsulasi terjaga
+# memperbarui yang sebelumnya dengan memperbaiki bagian 
+- encapsulasi
 - urutan logika 
-- tidak ada state ilegal (HP negatif /> maxHP )
+- state ilegal (HP negatif /> maxHP )
+- getter setter

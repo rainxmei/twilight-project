@@ -1,8 +1,9 @@
 #include "character.h"
 #include <iostream>
+#include <stdexcept>
 
 // constructor
-Character::Character(const string& name) :
+Character::Character(const std::string& name) :
     name(name),
     level(1),
     maxHp(100),
@@ -11,18 +12,35 @@ Character::Character(const string& name) :
     agility(10),
     intelligence(10)
 {
-    cout << "Character Created!" << endl;
+    std::cout << "Character Created!" << std::endl;
+}
+
+// getter
+std::string Character::getName() const {
+    return this->name;
+}
+
+int Character::getHp() const{
+    return this->hp;
+}
+
+int Character::getMaxHp() const{
+    return this->maxHp;
+}
+
+int Character::getLevel() const{
+    return this->level;
 }
 
 // methods
-void Character::showStatus(){
-    cout << "Name  : " << name << endl;
-    cout << "Level : " << level << endl;
-    cout << "Hp    : " << hp << " / " << maxHp << endl;
-    cout << "STR   : " << strength << endl;
-    cout << "AGI   : " << agility << endl;
-    cout << "INT   : " << intelligence << endl;
-    cout << "\n";
+void Character::showStatus() const{
+    std::cout << "Name  : " << name << std::endl;
+    std::cout << "Level : " << level << std::endl;
+    std::cout << "Hp    : " << hp << " / " << maxHp << std::endl;
+    std::cout << "STR   : " << strength << std::endl;
+    std::cout << "AGI   : " << agility << std::endl;
+    std::cout << "INT   : " << intelligence << std::endl;
+    std::cout << "\n";
 }
 
 void Character::levelUp(){
@@ -33,28 +51,36 @@ void Character::levelUp(){
     intelligence += 5;
     hp = maxHp;
 
-    cout << "Level up!" << endl;
+    std::cout << "Level up!" << std::endl;
+}
+
+bool Character::isAlive() const {
+    return hp > 0;
 }
 
 void Character::takeDamage(int damage){
+    if (damage <= 0) return;
+    
     hp -= damage;
-    if (hp < 0){
-        hp = 0;
-        cout << "Character is dead\n" << endl;
+    if (hp < 0) hp = 0;
+
+    std::cout << name << " takes " << damage << " damage!" << std::endl;
+
+    if (!isAlive()) {
+        std::cout << "Character is dead\n" << std::endl;
     }
 
-    if (hp > maxHp){
-        hp = maxHp;
-    }
-
-    cout << name << " takes " << damage << " damage!" << endl;
-    cout << "Current HP: " << hp << " / " << maxHp << endl;
-    cout << "\n";
+    std::cout << "Current HP: " << hp << " / " << maxHp << std::endl;
+    std::cout << "\n";
 }
 
 void Character::heal(int heal){
+    if (heal <= 0 || !isAlive()) return;
     hp += heal;
-    cout << name << " heals " << heal << " HP!" << endl;
-    cout << "Current HP: " << hp << " / " << maxHp << endl;
-    cout << "\n";
+    if (hp > maxHp){
+        hp = maxHp;
+    }
+    std::cout << name << " heals " << heal << " HP!" << std::endl;
+    std::cout << "Current HP: " << hp << " / " << maxHp << std::endl;
+    std::cout << "\n";
 }

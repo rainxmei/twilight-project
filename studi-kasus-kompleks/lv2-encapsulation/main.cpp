@@ -10,12 +10,13 @@ int main(){
     hero.heal(20);
     hero.takeDamage(200);
 
-    if (!hero.isAlive){
-        cout << "Game Over!\n" << endl;
+    if (!hero.isAlive()) {
+        std::cout << "Game Over!\n";
     }
+
 
     hero.levelUp();
     hero.showStatus();
 
-    cout << "Memory address karakter adalah: " << &hero << endl;
+    std::cout << "Memory address karakter adalah: " << &hero << std::endl;
 }

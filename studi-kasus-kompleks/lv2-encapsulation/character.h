@@ -1,14 +1,11 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 
-#include <iostream>
 #include <string>
-
-using namespace std;
 
 class Character{
     private:
-        string name;
+        std::string name;
         int level;
         int maxHp;
         int hp;
@@ -18,13 +15,20 @@ class Character{
 
     public:
         // constructor
-        Character(const string& name);
+        Character(const std::string& name);
+
+        // getter
+        std::string getName() const;
+        int getHp() const;
+        int getMaxHp() const;
+        int getLevel() const;
 
         // methods
-        void showStatus();
+        void showStatus() const;
         void levelUp();
         void takeDamage(int damage);
         void heal(int heal);
+        bool isAlive() const;
 };
 
 #endif
