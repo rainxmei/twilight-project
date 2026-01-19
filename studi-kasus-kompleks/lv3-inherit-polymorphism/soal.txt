@@ -1,0 +1,55 @@
+LEVEL 3 — INHERITANCE & POLYMORPHISM
+
+Tujuan:
+Memahami inheritance, virtual function, dan polymorphism pada C++.
+
+Studi Kasus:
+Sistem karakter game dengan satu base class (Character) dan dua turunan
+(Player dan Enemy). Semua entity adalah Character, tetapi memiliki
+perilaku attack yang berbeda.
+
+Spesifikasi:
+
+1. Character (Base Class)
+   - Bersifat abstract class
+   - Tidak boleh dibuat object langsung
+   - Memiliki atribut:
+     name, level, maxHp, hp, strength, agility, intelligence
+   - Memiliki method virtual:
+     - virtual void attack(Character& target) = 0;
+     - virtual void showStatus() const;
+   - Memiliki destructor virtual
+
+2. Player (Derived Class)
+   - Turunan dari Character
+   - Method attack():
+       damage = strength * 2
+   - Memiliki method levelUp():
+       level +1
+       maxHp +30
+       hp = maxHp
+       strength +10
+
+3. Enemy (Derived Class)
+   - Turunan dari Character
+   - Method attack():
+       damage = strength
+   - Tidak memiliki levelUp()
+
+Aturan:
+- Gunakan inheritance dan polymorphism murni
+- Gunakan keyword virtual dan override
+- Gunakan base pointer (Character*)
+- Tidak boleh menggunakan if/else berdasarkan tipe object
+- Output bebas, logic harus benar
+
+Struktur File:
+Level3/
+├── CMakeLists.txt
+├── Character.h
+├── Character.cpp
+├── Player.h
+├── Player.cpp
+├── Enemy.h
+├── Enemy.cpp
+└── main.cpp
