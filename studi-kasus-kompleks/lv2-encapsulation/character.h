@@ -17,7 +17,6 @@ class Character{
         int intelligence;
 
     public:
-        bool isAlive;
         // constructor
         Character(const string& name);
 

@@ -9,8 +9,7 @@ Character::Character(const string& name) :
     hp(100),
     strength(10),
     agility(10),
-    intelligence(10),
-    isAlive(true)
+    intelligence(10)
 {
     cout << "Character Created!" << endl;
 }
@@ -41,7 +40,6 @@ void Character::takeDamage(int damage){
     hp -= damage;
     if (hp < 0){
         hp = 0;
-        isAlive = false;
         cout << "Character is dead\n" << endl;
     }
 
@@ -56,9 +54,7 @@ void Character::takeDamage(int damage){
 
 void Character::heal(int heal){
     hp += heal;
-    isAlive = true;
     cout << name << " heals " << heal << " HP!" << endl;
     cout << "Current HP: " << hp << " / " << maxHp << endl;
     cout << "\n";
-    cout << "tes";
 }
