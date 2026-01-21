@@ -1,16 +1,16 @@
 #include <iostream>
 #include <thread>
 
-void tugas(){
-    std::cout << "Halo, ini dari thread lain\n";
+void sensor(int id) {
+    std::cout << "Sensor " << id << " aktif\n";
 }
 
-int main(){
-    std::cout << "Main mulai\n";
+int main() {
+    std::thread t1(sensor, 1); // buat thread
+    std::thread t2(sensor, 2);
 
-    std::thread t1(tugas); // buat thread
+    t1.join(); // nunggu thread selesai
+    t2.join();
 
-    t1.join(); // tunggu thread selesai
-
-    std::cout << "Main selesai\n";
+    return 0;
 }
