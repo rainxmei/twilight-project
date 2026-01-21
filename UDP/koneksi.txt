@@ -1,0 +1,11 @@
+UDP bekerja dengan konsep kirim langsung tanpa koneksi. 
+Program tidak perlu saling “kenalan” atau memastikan 
+paket sampai, cukup mengirim data ke alamat tujuan. 
+Dalam program, komunikasi ini dilakukan melalui 
+socket, yang bisa dianggap sebagai pintu 
+komunikasi. Setiap socket terikat pada IP address 
+(alamat komputer) dan port (nomor pintu), sehingga data 
+tahu harus masuk ke program yang mana. Server UDP hanya 
+perlu membuka socket dan mendengarkan di port tertentu, 
+sementara client cukup mengirim data ke IP dan port tujuan 
+lalu selesai.

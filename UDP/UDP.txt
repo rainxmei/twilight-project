@@ -1,0 +1,12 @@
+Gimana caranya robot bisa saling kirim data cepat?
+jawabannya karena robot menggunakan UDP 
+
+UDP dipilih dalam robot soccer karena robot membutuhkan 
+informasi yang sangat cepat dan real-time, 
+bukan informasi yang sempurna.
+
+Dalam pertandingan, data seperti posisi bola, arah robot, 
+atau perintah strategi akan cepat basi, sehingga kehilangan 
+satu atau dua paket data bukan masalah besar selama data terbaru 
+terus mengalir. Inilah alasan utama UDP lebih cocok dibanding TCP 
+yang lambat karena terlalu menjaga keutuhan data.
