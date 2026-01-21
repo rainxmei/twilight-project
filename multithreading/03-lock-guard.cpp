@@ -1,6 +1,5 @@
-// solusi race condition dengan mutex
-// mutex = kunci
-// jadi thread lain gabisa masuk
+// dengan lock guard program bisa otomatis unlock 
+// ketika keluar dari scope
 #include <iostream>
 #include <thread>
 #include <mutex>
@@ -10,9 +9,8 @@ std::mutex mtx;
 
 void tambah() {
     for (int i = 0; i < 1000; i++) {
-        mtx.lock();
+        std::lock_guard<std::mutex> lock(mtx);
         counter++;
-        mtx.unlock();
     }
 }
 
@@ -25,6 +23,4 @@ int main() {
 
     std::cout << "Counter = " << counter << std::endl;
     return 0;
-    // jadi kalo tanpa mutex hasilnya akan 
-    // acak tidak selalu pas 2000
 }
