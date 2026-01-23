@@ -8,3 +8,4 @@ yang sudah diselesaikan
 6. raindrops
 7. pangram
 8. two-fer
+9. 
