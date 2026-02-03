@@ -1,0 +1,17 @@
+<launch>
+
+    <arg name="ball_x" default="15.0"/>
+    <arg name="ball_y" default="20.0"/>
+
+    <node pkg="robot_soccer" type="game_controller_node" name="game_controller_node" />
+
+    <node pkg="robot_soccer" type="motion_node" name="motion_node">
+
+        <param name="ball_x" value="$(arg ball_x)" />
+        <param name="ball_y" value="$(arg ball_y)" />
+    
+    </node>
+
+    <node pkg="robot_soccer" type="decision_node" name="decision_node" output="screen" />
+
+</launch>
