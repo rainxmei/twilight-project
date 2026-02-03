@@ -1,8 +1,0 @@
-prefix=/home/eros/abyan/tugas_intellegent/devel
-
-Name: robot_soccer
-Description: Description of robot_soccer
-Version: 0.0.0
-Cflags: -I/home/eros/abyan/tugas_intellegent/devel/include
-Libs: -L${prefix}/lib 
-Requires: actionlib actionlib_msgs geometry_msgs roscpp std_srvs
