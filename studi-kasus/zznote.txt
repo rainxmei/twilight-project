@@ -11,3 +11,6 @@ yang sudah diselesaikan
 9. Grade School
 10. hamming
 11. nucleotide-count
+12. rna-transcription
+13. collatz-conjecture
+14. 
