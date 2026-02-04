@@ -1,49 +1,37 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
+#include <map>
 
 namespace Nc
 {
-    int count_a = 0;
-    int count_c = 0;
-    int count_g = 0;
-    int count_t = 0;
-
-    std::string ncCheck(std::string in)
+    std::map<char, int> count(const std::string &dna)
     {
-        for (int i = 0; i < in.size(); i++)
+        std::map<char, int> result{
+            {'A', 0}, {'C', 0}, {'G', 0}, {'T', 0}
+        };
+
+        for (char c : dna)
         {
-            if (in[i] != 'A' || in[i] != 'C' || in[i] != 'G' || in[i] != 'T')
+            if (c != 'A' && c != 'C' && c != 'G' && c != 'T')
             {
                 throw std::runtime_error("input tidak valid");
             }
 
-            if (in[i] == 'A')
-            {
-                count_a++;
-            }
-            else if (in[i] == 'C')
-            {
-                count_c++;
-            }
-            else if (in[i] == 'G')
-            {
-                count_g++;
-            }
-            else if (in[i] == 'T')
-            {
-                count_t++;
-            }
+            result[c]++;
         }
-
-        std::cout << "A = " << count_a 
+        return result;
     }
 }
 
 int main(int argc, char const *argv[])
 {
     std::string in = "GATTACA";
-    std::cout << Nc::ncCheck(in);
+    auto dna = Nc::count(in);
+    
+    for (auto [k, v] : dna){
+        std::cout << k << " : " << v << "\n";
+    }
 
     return 0;
 }

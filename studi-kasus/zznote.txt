@@ -10,3 +10,4 @@ yang sudah diselesaikan
 8. two-fer
 9. Grade School
 10. hamming
+11. nucleotide-count
