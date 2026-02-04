@@ -13,4 +13,6 @@ yang sudah diselesaikan
 11. nucleotide-count
 12. rna-transcription
 13. collatz-conjecture
-14. 
+14. difference-square
+15. nth-prime
+16. queen-attack
