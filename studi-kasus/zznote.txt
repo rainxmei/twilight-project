@@ -9,4 +9,4 @@ yang sudah diselesaikan
 7. pangram
 8. two-fer
 9. Grade School
-10. 
+10. hamming
