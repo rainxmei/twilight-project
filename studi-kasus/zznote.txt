@@ -16,3 +16,5 @@ yang sudah diselesaikan
 14. difference-square
 15. nth-prime
 16. queen-attack
+17. sieve
+18. gigaseconds
