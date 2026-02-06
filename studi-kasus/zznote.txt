@@ -19,3 +19,5 @@ yang sudah diselesaikan
 17. sieve
 18. gigaseconds
 19. secret-handshake
+20. alergies
+21. protein-translation
