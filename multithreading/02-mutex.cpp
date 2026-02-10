@@ -29,4 +29,5 @@ int main() {
     // acak tidak selalu pas 2000
     // tetapi jika kita lock dan unlock manual ada sautu 
     // kondisi dimana unlock tidak bisa tereksekusi
+    // misalnya jika terjadi exception maka unlock tidak akan tereksekusi
 }
