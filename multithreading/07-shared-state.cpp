@@ -4,7 +4,8 @@
 #include <chrono>
 #include <atomic>
 
-struct WorldModel{
+struct WorldModel
+{
     double ball_x = 0.0;
     double ball_y = 0.0;
     double yaw = 0.0;
@@ -14,8 +15,10 @@ WorldModel world;
 std::mutex world_mtx;
 std::atomic<bool> running{true};
 
-void vision_thread(){
-    while (running) {
+void vision_thread()
+{
+    while (running)
+    {
         {
             std::lock_guard<std::mutex> lock(world_mtx);
             world.ball_x += 0.1;
@@ -25,8 +28,10 @@ void vision_thread(){
     }
 }
 
-void imu_thread(){
-    while (running){
+void imu_thread()
+{
+    while (running)
+    {
         {
             std::lock_guard<std::mutex> lock(world_mtx);
             world.yaw += 1.0;
@@ -35,8 +40,10 @@ void imu_thread(){
     }
 }
 
-void strategy_thread(){
-    while (running){
+void strategy_thread()
+{
+    while (running)
+    {
         WorldModel local;
         {
             std::lock_guard<std::mutex> lock(world_mtx);
@@ -51,7 +58,8 @@ void strategy_thread(){
     }
 }
 
-int main(){
+int main()
+{
     std::thread t1(vision_thread);
     std::thread t2(imu_thread);
     std::thread t3(strategy_thread);
@@ -65,4 +73,5 @@ int main(){
 
     std::cout << "Program selesai dengan aman\n";
     return 0;
+    // tes
 }
