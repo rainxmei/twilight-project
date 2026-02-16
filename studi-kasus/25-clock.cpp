@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 class Clock
@@ -35,21 +36,10 @@ public:
         hour = totalMinutes / 60;
         minutes = totalMinutes % 60;
 
-        std::string hourStr = std::to_string(hour);
-        std::string minuteStr = std::to_string(minutes);
-
-        if (hourStr.size() == 1)
-        {
-            hourStr = "0" + hourStr;
-        }
-
-        if (minuteStr.size() == 1)
-        {
-            minuteStr = "0" + minuteStr;
-        }
-
-        std::cout << hourStr << ":" << minuteStr;
-    }
+        std::cout << std::setw(2) << std::setfill('0') << hour;
+        std::cout << ":";
+        std::cout << std::setw(2) << std::setfill('0') << minutes;
+    }   
 };
 
 int main(int argc, char const *argv[])
