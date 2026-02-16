@@ -21,3 +21,6 @@ yang sudah diselesaikan
 19. secret-handshake
 20. alergies
 21. protein-translation
+22. sum-multiples
+23. prime-factors
+24. robot-name
