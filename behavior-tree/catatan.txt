@@ -1,0 +1,17 @@
+Behavior Tree (BT) lebih cocok untuk sistem kompleks dibanding FSM karena tidak bergantung 
+pada perpindahan state yang saling terhubung satu sama lain. Pada FSM, semakin banyak behavior 
+maka semakin banyak transisi yang harus dibuat, sehingga sistem menjadi sulit dirawat 
+(state explosion). Sedangkan pada BT, robot tidak “berada di satu state tetap”, tetapi mengevaluasi 
+ulang seluruh struktur dari root setiap tick untuk menentukan behavior paling relevan saat itu.
+
+##TICK
+Tick adalah proses evaluasi tree yang dipanggil terus-menerus (biasanya setiap loop sistem). 
+Setiap node mengembalikan salah satu dari tiga status: SUCCESS, FAILURE, atau RUNNING.
+
+##Sequence
+Sequence bekerja seperti logika AND. Ia menjalankan child dari kiri ke kanan dan akan berhenti 
+jika ada yang FAILURE atau RUNNING. Sequence hanya SUCCESS jika semua child SUCCESS.
+
+##Selector
+Selector bekerja seperti logika OR atau priority. Ia mencoba child dari atas ke bawah dan berhenti 
+pada child pertama yang SUCCESS atau RUNNING. Jika semua gagal, barulah ia FAILURE.
