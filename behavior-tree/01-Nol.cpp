@@ -20,6 +20,10 @@ public:
 class Sequence : public Node
 {
 private:
+    //! kenapa Node pake pointer?
+    //! karena Node itu abstract class tidak bisa dibuat objectnya
+    //! karena ada = 0 pada tick
+    //! karena untuk menghindari object slicing
     std::vector<Node *> children;
 
 public:
@@ -126,6 +130,8 @@ public:
 
         if (scanCount >= 2)
         {
+            //! kenapa ballVisible bisa merubah variable diluar?
+            // karena dia menggunakan pointer
             std::cout << "[Action] Ball Found!\n";
             *ballVisible = true;
             return Status::SUCCESS;
@@ -143,6 +149,14 @@ int main(int argc, char const *argv[])
     WalkToBall walkToBall;
     ScanForBall scan(&ballVisible);
 
+    // Selector (root)
+    // ├── Sequence
+    // │     ├── SeeBall
+    // │     └── WalkToBall
+    // └── ScanForBall
+
+    // Sequence itu sama dengan logika AND jadi harus bisa semua 
+    // Selector itu sama dengan logika OR jadi kalo tidak bisa skip ke selanjutnya
     Sequence approach({&seeBall, &walkToBall});
     Selector root({&approach, &scan});
 
@@ -161,6 +175,6 @@ int main(int argc, char const *argv[])
 
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }
-    
+
     return 0;
 }
