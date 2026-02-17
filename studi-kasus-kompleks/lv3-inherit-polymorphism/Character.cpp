@@ -10,3 +10,4 @@ Character::Character(const std::string& name) :
     {
         std::cout << "Character Created!" << std::endl;
     }
+    
