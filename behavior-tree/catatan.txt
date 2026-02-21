@@ -15,3 +15,15 @@ jika ada yang FAILURE atau RUNNING. Sequence hanya SUCCESS jika semua child SUCC
 ##Selector
 Selector bekerja seperti logika OR atau priority. Ia mencoba child dari atas ke bawah dan berhenti 
 pada child pertama yang SUCCESS atau RUNNING. Jika semua gagal, barulah ia FAILURE.
+
+##BlackBoard
+Blackboard adalah tempat data bersama dalam Behavior Tree yang digunakan semua node untuk membaca dan 
+memperbarui informasi world model seperti posisi bola atau status robot. Dengan Blackboard, struktur 
+Behavior Tree menjadi modular, rapi, dan mudah dikembangkan sehingga sangat cocok untuk menggantikan 
+FSM pada sistem decision robot humanoid soccer.
+
+##Parallel Memory
+Parallel Node memungkinkan beberapa action berjalan bersamaan seperti walking dan head scanning, 
+sedangkan Memory Sequence membuat eksekusi Behavior Tree lebih stabil karena tidak selalu mengulang 
+dari awal setiap tick. Kombinasi keduanya membuat Behavior Tree cocok untuk sistem decision robot humanoid 
+nyata dan jauh lebih fleksibel dibanding FSM.
